@@ -94,7 +94,7 @@ while(1):
     mask = cv2.dilate(mask,kernel,iterations = 2)
     
     # Find Contours
-    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, 
+    _, contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, 
     cv2.CHAIN_APPROX_SIMPLE)
     
     # Make sure there is a contour present and also it size is bigger than 
